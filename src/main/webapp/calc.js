@@ -23,6 +23,18 @@ var vm = new Vue({
 
 
 	methods : {
+        digitHandler: function(e) {
+           var kc = e.keyCode;
+           if(kc == 8 || kc == 46 || kc == 39 || kc == 40){
+                return;
+           }
+
+           var code = e.key.replace(/[^\d|\.]/g, "");
+           if(!code){
+              e.preventDefault();
+           }
+        },
+
 		calculate : function() {
 			var that = this;
 

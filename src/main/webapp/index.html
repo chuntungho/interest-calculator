@@ -33,21 +33,21 @@
                 <div class="form-group">
                     <label class="col-xs-3 control-label">借款本金</label>
                     <div class="col-xs-9">
-                        <input type="text" v-model="req.capital" class="form-control"/>
+                        <input type="number" @keydown="digitHandler" v-model="req.capital" class="form-control"/>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label class="col-xs-3 control-label">年化利率(%)</label>
                     <div class="col-xs-9">
-                        <input type="text" v-model="req.apr" class="form-control"/>
+                        <input type="number" @keydown="digitHandler" v-model="req.apr" class="form-control"/>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label class="col-xs-3 control-label">期数(月)</label>
                     <div class="col-xs-9">
-                        <input type="text" v-model="req.duration" class="form-control"/>
+                        <input type="number" @keydown="digitHandler"  v-model="req.duration" class="form-control"/>
                     </div>
                 </div>
 
@@ -92,6 +92,6 @@
     </div>
 </div>
 
-<script src="calc.js?v1"></script>
+<script src="calc.js?v1.1"></script>
 </body>
 </html>
