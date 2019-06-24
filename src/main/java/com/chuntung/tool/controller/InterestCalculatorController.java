@@ -20,7 +20,7 @@ public class InterestCalculatorController {
 	private Logger logger = LoggerFactory.getLogger(getClass());
 
 	@RequestMapping(value = "/calculate", method = RequestMethod.POST)
-	@Cacheable(cacheNames = "calcCache")
+	@Cacheable(cacheNames = "calc-result")
 	public Response<CalcResultDTO> calculate(@Valid CalcReq req) {
 		logger.info("req {}", req);
 

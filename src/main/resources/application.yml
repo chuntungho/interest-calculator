@@ -3,3 +3,10 @@ server:
     context-path: /tool
 
 debug: true
+
+spring:
+  cache:
+    type: caffeine
+    cacheNames: calc-result
+    caffeine:
+      spec: maximumSize=5000, expireAfterAccess=10m

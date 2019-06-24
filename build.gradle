@@ -31,11 +31,13 @@ dependencies {
 	compile("org.springframework.boot:spring-boot-starter-web"){
 		exclude module: "spring-boot-starter-tomcat"
 	}
-	// providedCompile("javax.servlet:javax.servlet-api:3.1.0")
-	compile("org.springframework.boot:spring-boot-starter-jetty")
+	providedCompile("javax.servlet:javax.servlet-api:3.1.0")
+	providedRuntime("org.springframework.boot:spring-boot-starter-jetty")
 
 	compile('org.springframework.boot:spring-boot-starter-cache')
-	compile('net.sf.ehcache:ehcache')
+	compile('com.github.ben-manes.caffeine:caffeine')
+//	compile('net.sf.ehcache:ehcache')
+	
 	compile('org.springframework.boot:spring-boot-starter-validation')
 
 	compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.25'
